@@ -1,0 +1,201 @@
+<style media="screen" type="text/css">
+
+.strongColor {
+	color:#1a566e;
+	font-weight: bold;
+}
+
+h3{
+	color:#1a566e;
+	text-transform: uppercase;
+}
+
+h3:after{
+	content: "";
+    width: 75px;
+    margin-top: 10px;
+    display: block;
+    border-bottom: 3px solid #00ffb7;
+}
+
+h4{
+	color:#1a566e;
+	text-transform: uppercase;
+}
+
+.tableBasics {
+	text-align: center;
+	border:none;
+	border: 1px solid #1a566e;
+	border-collapse: collapse;
+}
+
+.tableBasics thead tr th{
+	padding-top:5px;
+	padding-bottom:5px;
+	border-bottom: 1px solid #1a566e;
+}
+
+.tableBasics td {
+	border-left: 1px solid #1a566e;
+	border-right: 1px solid #1a566e;
+}
+
+.tableBasics td:first-child {
+	border-left: none;
+}
+
+.tableBasics td:last-child {
+	border-right: none;
+}
+
+.contentTableBasics td {
+	text-align:left;
+	padding : 10px;
+}
+
+.performances {
+	text-align: center !important;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+
+	<body>
+		<h4>Which language should we use?</h4>
+		<p class="strongColor">
+			<strong>
+			As a developper it's a question that you often have to ask, since a good developer is a lazy developer (<a href="http://threevirtues.com/">Three virtues</a>) we usually use the language that we "master" but is it always a good solution ?
+			</strong>
+		</p>
+		<p>
+			<span>In our application we have the following stack :</span>
+			<ul>
+				<li>AngularJS for the webapp</li>
+				<li>Java for the backend</li>
+				<li>MongoDb for our database</li>
+			</ul>
+			<span>
+				During our development phase we often have to develop some scripts to update our database, change the configuration etc. and have to ask ourselves which language should we use.<br/>
+				Of course the following languages can be useful in many other cases but we will keep the scope to the scripting in this article.<br/>
+				We currently have 3 types of scripts : 
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Node.js">NodeJS</a></li>
+					<li><a href="http://https://en.wikipedia.org/wiki/Groovy_(programming_language)">Groovy</a></li>
+				</ul>
+			</span>
+		</p>
+
+		<h3><strong>Basics</strong></h3>
+		<table class="tableBasics">
+			<thead class="strongColor" style="padding-bottom:10px;">
+				<tr>	
+					<th>Python</th>
+					<th>NodeJS</th>
+					<th>Groovy</th>
+				</tr>
+			</thead>
+			<tbody class="contentTableBasics">
+				<tr>
+					<td>1991 - Last version : 3.6.0 - December 2016</td>
+					<td>2009 - Last version : 7.4.0 - January 2017</td>
+					<td>2003 - Last version 2.4.7 - June 2016</td>
+				</tr>
+				<tr>
+					<td>Package manager : PIP</td>
+					<td>Package manager : NPM</td>
+					<td>Allow the use of java libraries</td>
+				</tr>
+				<tr>
+					<td>Object oriented language</td>
+					<td>Javascript</td>
+					<td>Java</td>
+				</tr>
+				<tr>
+					<td>Easy to learn</td>
+					<td>Easy to use if you know javascript</td>
+					<td>Easy to use if you know Java</td>
+				</tr>
+				<tr>
+					<td>Large community</td>
+					<td>Use asynchronous mecanisms</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3><strong>Statistics</strong></h3>
+		<p>
+			Every year stack overflow does a big survey (~50 000 votes) to analyze different aspects of a developer work, you can see below the most popular technologies.<br/>
+			<a href="http://stackoverflow.com/research/developer-survey-2016#technology-most-popular-technologies">Check it out!</a>
+		</p>
+		<img src="img/stack.png">
+		<p>
+			So, what does this chart teaches us?<br/>
+			We can see that only 0.34% of the answers are about Groovy, it's probably biased as Groovy uses Java, but what’s more interesting is that Java and Python are almost at the same level (roughly 30%) and NodeJS 17.2% (but uses Javascript).<br/>
+ 			It means that we have the majority of the developers who's able to develop with at least one of these 3 languages which is interesting when you think about the maintenability of your scripts.
+ 		</p>
+
+ 		<h3><strong>Real life examples</strong></h3>
+
+ 		<p>
+ 			In order to compare the three languages, we developed a simple algorithm which find a document in our mongoDb database, updates it and then find it again to show the result.
+ 		</p>
+
+ 		<table class="tableBasics">
+ 		<thead class="strongColor" style="padding-bottom:10px;">
+				<tr>	
+					<th>Python</th>
+					<th>NodeJS</th>
+					<th>Groovy</th>
+				</tr>
+			</thead>
+			<tbody class="contentTableBasics">
+ 				<tr>
+	 				<td>
+	 					<a href="#" onclick="document.location='img/db_python.png';return false;" >
+						    <img src="img/python_small.png">
+						</a>
+	 				</td>
+	 				<td>
+	 					<a href="#" onclick="document.location='img/db_nodejs.png';return false;" >
+						    <img src="img/node_small.png">
+						</a>
+	 				</td>
+	 				<td>
+	 					<a href="#" onclick="document.location='img/db_groovy.png';return false;" >
+						    <img src="img/groovy_small.png">
+						</a>
+	 				</td>
+ 				</tr>
+ 				<tr style="border-top: 1px solid #1a566e;">
+ 					<td class="strongColor performances">~10ms</td>
+ 					<td class="strongColor performances">~40/50ms</td>
+ 					<td class="strongColor performances">~15/20ms</td>
+ 				</tr>
+ 			</tbody>
+ 		</table>
+ 		
+ 		<p>
+ 			On those examples we can see that:
+ 			<ul>
+ 				<li>Python uses the less lines</li>
+ 				<li>The async behaviour of NodeJS makes the algorithm harder to understand for people who are not used of reading Javascript</li>
+ 				<li>The queries are more complicated to write in Groovy</li>
+ 				<li>Python and NodeJS have a syntax similar to mongo</li>
+ 			</ul>
+ 			As a conclusion, <strong>in this example</strong> we can see that the simpler language seems to be Python.<br/>
+ 			I would personnaly recommend Python because of his simplicity, even though NodeJS allows us to directly use JSON object.<br/>
+ 			We can see that NodeJS is significantly slower than the two others languages.
+ 		</p>
+
+ 		<h3><strong>Performances</strong></h3>
+
+	</body>
+
+</html>

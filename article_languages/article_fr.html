@@ -1,0 +1,228 @@
+<style media="screen" type="text/css">
+
+.strongColor {
+	color:#1a566e;
+	font-weight: bold;
+}
+
+h3{
+	color:#1a566e;
+	text-transform: uppercase;
+}
+
+h3:after{
+	content: "";
+    width: 75px;
+    margin-top: 10px;
+    display: block;
+    border-bottom: 3px solid #00ffb7;
+}
+
+h4{
+	color:#1a566e;
+	text-transform: uppercase;
+}
+
+.tableBasics {
+	text-align: center;
+	border:none;
+	border: 1px solid #1a566e;
+	border-collapse: collapse;
+}
+
+.tableBasics thead tr th{
+	padding-top:5px;
+	padding-bottom:5px;
+	border-bottom: 1px solid #1a566e;
+}
+
+.tableBasics td {
+	border-left: 1px solid #1a566e;
+	border-right: 1px solid #1a566e;
+}
+
+.tableBasics td:first-child {
+	border-left: none;
+}
+
+.tableBasics td:last-child {
+	border-right: none;
+}
+
+.contentTableBasics td {
+	text-align:left;
+	padding : 10px;
+}
+
+.performances {
+	text-align: center !important;
+}
+
+</style>
+
+<!DOCTYPE html>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<html>
+	<head>
+	</head>
+
+	<body>
+		<h4>Quel langage dois-je utiliser ?</h4>
+		<p class="strongColor">
+			<strong>
+			En tant que developpeur c'est une question que l'on doit souvent se poser, étant donné qu'un bon développeur est un développeur fénéant (<a href="http://threevirtues.com/">Three virtues</a>) on utilise généralement le langage que l'on connaît le mieux, cependant est-ce vraiment la meilleure solution ?
+			</strong>
+		</p>
+		<p>
+			<span>Dans notre application nous utilisons le stack suivant : </span>
+			<ul>
+				<li>AngularJS pour la partie Web</li>
+				<li>Java pour le backend</li>
+				<li>MongoDb pour la base de données</li>
+			</ul>
+			<span>
+				Pendant nos phases de développement nous avons souvent besoin de développer des scripts pour mettre à jour la base de données, les configurations etc. et nous demandons quel langage nous devrions utiliser.<br/>
+				Nous avons actuellement les 3 langages suivant (ceux-ci peuvent évidemment être utiles dans d'autres cas d'utilisation, cependant dans le cadre de cet article nous nous limiterons au scripting) :
+				<ul>
+					<li><a href="https://en.wikipedia.org/wiki/Python_(programming_langage)">Python</a></li>
+					<li><a href="https://en.wikipedia.org/wiki/Node.js">NodeJS</a></li>
+					<li><a href="http://https://en.wikipedia.org/wiki/Groovy_(programming_langage)">Groovy</a></li>
+				</ul>
+			</span>
+		</p>
+
+		<h3><strong>Essentiel</strong></h3>
+		<table class="tableBasics">
+			<thead class="strongColor" style="padding-bottom:10px;">
+				<tr>
+					<th>Python</th>
+					<th>NodeJS</th>
+					<th>Groovy</th>
+				</tr>
+			</thead>
+			<tbody class="contentTableBasics">
+				<tr>
+					<td>1991 - Dernière version : 3.6.0 - Décembre 2016</td>
+					<td>2009 - Dernière version : 7.4.0 - Janvier 2017</td>
+					<td>2003 - Dernière version 2.4.7 - Juin 2016</td>
+				</tr>
+				<tr>
+					<td>Gestionnaire de paquets : PIP</td>
+					<td>Gestionnaire de paquets : NPM</td>
+					<td>Permet l'utilisation des librairies Java</td>
+				</tr>
+				<tr>
+					<td>Langage orienté objet</td>
+					<td>Javascript</td>
+					<td>Java</td>
+				</tr>
+				<tr>
+					<td>Facile à apprendre</td>
+					<td>Facile à utiliser si l'on connaît javascript</td>
+					<td>Facile à utiliser si l'on connaît Java</td>
+				</tr>
+				<tr>
+					<td>Grosse communauté</td>
+					<td>Utilise des mécanismes asynchrones</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3><strong>Statistiques</strong></h3>
+		<p>
+			Chaque année le site stack overflow fait un sondage (~50 000 votes) permettant d'analyser différents aspecter du travail de développeur, ci-dessous vous pouvez vous les technologies les plus populaires.<br/>
+			<a href="http://stackoverflow.com/research/developer-survey-2016#technology-most-popular-technologies">Consulter le sondage</a>
+		</p>
+		<img src="img/stack.png">
+		<p>
+			Que peux t-on déduire de ce graphique ?<br/>
+			On peut voir que seulement 0.34% des réponses concernent Groovy, ce résultat est probablement biaisé puisque Groovy s'appuie sur Java, ce qui est par contre intéressant est que Python et Java sont quasiment au même niveau (environ 30%) et que nodeJS est à 17.2% (mais utilise Javascript)<br/>
+			Cela signifie que la majorité des développeurs sont capable de développer avec au moins un de ces 3 langages, ce qui est très intéressant vis-à-vis de la maintenabilité des scripts.
+ 		</p>
+
+ 		<h3><strong>Exemple</strong></h3>
+
+ 		<p>
+			Afin de comparer les 3 langages, j'ai développé un algorithme qui cherche un document dans notre base de donnée mongo, le met à jour et le recherche à nouveau pour afficher le résultat.
+ 		</p>
+
+ 		<table class="tableBasics">
+ 		<thead class="strongColor" style="padding-bottom:10px;">
+				<tr>
+					<th>Python</th>
+					<th>NodeJS</th>
+					<th>Groovy</th>
+				</tr>
+			</thead>
+			<tbody class="contentTableBasics">
+ 				<tr>
+	 				<td>
+	 					<a href="#" onclick="document.location='img/db_python.png';return false;" >
+						    <img src="img/python_small.png">
+						</a>
+	 				</td>
+	 				<td>
+	 					<a href="#" onclick="document.location='img/db_nodejs.png';return false;" >
+						    <img src="img/node_small.png">
+						</a>
+	 				</td>
+	 				<td>
+	 					<a href="#" onclick="document.location='img/db_groovy.png';return false;" >
+						    <img src="img/groovy_small.png">
+						</a>
+	 				</td>
+ 				</tr>
+ 				<tr style="border-top: 1px solid #1a566e;">
+ 					<td class="strongColor performances">~10ms</td>
+ 					<td class="strongColor performances">~40/50ms</td>
+ 					<td class="strongColor performances">~15/20ms</td>
+ 				</tr>
+ 			</tbody>
+ 		</table>
+
+ 		<p>
+			Sur ces exemples on peux voir que :
+ 			<ul>
+ 				<li>Python est plus concis</li>
+ 				<li>Le fonctionnement asynchrone de NodeJS rends l'algorithme plus difficile à comprendre pour quelqu'un qui n'a pas l'habitude de lire du Javascript</li>
+ 				<li>Les requêtes sont plus compliquées à écrire en Groovy</li>
+ 				<li>Python et NodeJS ont une syntaxe similaire à MongoDB</li>
+ 			</ul>
+			En conclusion, <strong>dans cet exemple</strong> on peut voir que le langage le plus simple semble être le Python.<br/>
+			Personnellement je recommenderais d'utiliser Python pour sa simplicité, même si NodeJS nous permet d'utiliser directement des objets JSON.<br/>
+			Il est également possible de voir que NodeJS est plus lent que les deux autres langages.
+ 		</p>
+
+ 		<h3><strong>Performances</strong></h3>
+
+		<p>
+			En fonction du cas d'utilisation, les performances doivent (ou non) être prises en compte quand on compare les différents langages.<br/>
+			Nous avons déjà vu dans notre exemple précédent que NodeJS était plus lent que les 2 autres langages, nous allons maintenant comparer les performances sur différents algorithmes.
+		</p>
+		<img src="img/algo.png">
+		<p>
+			<strong>Source</strong> : <a href="http://benchmarksgame.alioth.debian.org/">http://benchmarksgame.alioth.debian.org/</a><br/>
+			Nous pouvons voir que NodeJS et Java sont plus rapides sur 3 des 4 algorithmes, cependant chaque langage à ses propres spécificités.<br/>
+			Ce qui est également intéressant est la charge CPU, on peut voir que NodeJS utilise beaucoup moins de CPU que les 2 autres langages, ceci peut être pris en compte par exemple si le programme doit faire d'importants calculs.
+		</p>
+
+		<h3><strong>Conclusions</strong></h3>
+		<p>
+			<strong>Au final, quel langage dois-je choisir ?!</strong><br/>
+			Personnellement, je ne pense pas qu'il y ait de bonne réponse à cette question, tout dépend du cas d'utilisation.<br/>
+			Afin de choisir un langage il faut répondre aux questions suivantes :
+			<ul>
+				<li>Quels sont les langages sur lesquels l'équipe est à l'aise ?</li>
+				<li>Quel type d'application suis-je en train de construire ?</li>
+				<li>Est-ce que je dois prendre en considération les performances ?</li>
+				<li>Est-ce que je peux recruter facilement des gens qui connaissent ce langage ?</li>
+			</ul>
+			Lorsque l'équipe a répondu à ces questions, choisissez un langage et rester cohérents, n'utilisez pas 3 langages différents pour faire la même chose.
+		</p>
+
+		<h3><strong>TL;DR</strong></h3>
+		<a href="http://www.wfplsiu.com/#">http://www.wfplsiu.com/#</a>
+	</body>
+
+</html>

@@ -81,8 +81,7 @@ h4{
 			</ul>
 			<span>
 				During our development phase we often have to develop some scripts to update our database, change the configuration etc. and have to ask ourselves which language should we use.<br/>
-				Of course the following languages can be useful in many other cases but we will keep the scope to the scripting in this article.<br/>
-				We currently have 3 types of scripts : 
+				We currently have 3 types of scripts (of course the following languages can be useful in many other cases but we will keep the scope to the scripting in this article) : <br/>
 				<ul>
 					<li><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Python</a></li>
 					<li><a href="https://en.wikipedia.org/wiki/Node.js">NodeJS</a></li>
@@ -94,7 +93,7 @@ h4{
 		<h3><strong>Basics</strong></h3>
 		<table class="tableBasics">
 			<thead class="strongColor" style="padding-bottom:10px;">
-				<tr>	
+				<tr>
 					<th>Python</th>
 					<th>NodeJS</th>
 					<th>Groovy</th>
@@ -137,11 +136,11 @@ h4{
 		<img src="img/stack.png">
 		<p>
 			So, what does this chart teaches us?<br/>
-			We can see that only 0.34% of the answers are about Groovy, it's probably biased as Groovy uses Java, but what’s more interesting is that Java and Python are almost at the same level (roughly 30%) and NodeJS 17.2% (but uses Javascript).<br/>
- 			It means that we have the majority of the developers who's able to develop with at least one of these 3 languages which is interesting when you think about the maintenability of your scripts.
+			We can see that only 0.34% of the answers are about Groovy, it's probably biased as Groovy uses Java, but what's more interesting is that Java and Python are almost at the same level (roughly 30%) and NodeJS 17.2% (but uses Javascript).<br/>
+ 			It means that we have the majority of the developers who are able to develop with at least one of these 3 languages which is interesting when you think about the maintenability of your scripts.
  		</p>
 
- 		<h3><strong>Real life examples</strong></h3>
+ 		<h3><strong>Real life example</strong></h3>
 
  		<p>
  			In order to compare the three languages, we developed a simple algorithm which find a document in our mongoDb database, updates it and then find it again to show the result.
@@ -149,7 +148,7 @@ h4{
 
  		<table class="tableBasics">
  		<thead class="strongColor" style="padding-bottom:10px;">
-				<tr>	
+				<tr>
 					<th>Python</th>
 					<th>NodeJS</th>
 					<th>Groovy</th>
@@ -180,7 +179,7 @@ h4{
  				</tr>
  			</tbody>
  		</table>
- 		
+
  		<p>
  			On those examples we can see that:
  			<ul>
@@ -195,6 +194,35 @@ h4{
  		</p>
 
  		<h3><strong>Performances</strong></h3>
+
+		<p>
+			Depending on the use case, looking at the performances can be interesting while comparing different languages.<br/>
+			We've already seen in our previous example that nodeJS seems to be slower than the two other languages, now we will compare the performances<br/>
+			on differents algorithms.
+		</p>
+		<img src="img/algo.png">
+		<p>
+			<strong>Source</strong> : <a href="http://benchmarksgame.alioth.debian.org/">http://benchmarksgame.alioth.debian.org/</a><br/>
+			We can see that nodeJS and Java are faster on 3 of the 4 algorithms, but each language has his own specifity.<br/>
+			What's really interesting is the CPU load, nodeJS uses less CPU than the other 2, it can be useful if your program does heavy calculations for example.<br/>
+		</p>
+
+		<h3><strong>Conclusions</strong></h3>
+		<p>
+			<strong>So now, which language do I chose?!</strong><br/>
+			I don't think that there is a good answer to this question, it always depends on the use case.<br/>
+			To chose a language, in my opinion you need to answer the following questions :
+			<ul>
+				<li>What kinds of languages are my team comfortable with?</li>
+				<li>What kind of applications do I want to build?</li>
+				<li>Do I really need to take the performances in consideration?</li>
+				<li>How easy is it to recruit for this platform?</li>
+			</ul>
+			When the team has answered those questions, just pick a language and stick with it, coherence is the key, don't use 3 differents language to do the same things.<br/>
+		</p>
+
+		<h3><strong>TL;DR</strong></h3>
+		<a href="http://www.wfplsiu.com/#">http://www.wfplsiu.com/#</a>
 
 	</body>
 
